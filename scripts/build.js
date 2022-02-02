@@ -14,7 +14,6 @@ var categories = [
   ["Travel & Places", "places"],
   ["Objects", "objects"],
   ["Symbols", "symbols"],
-  ["Component", "component"],
   ["Flags", "flags"],
 ];
 
