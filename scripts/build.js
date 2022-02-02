@@ -1,5 +1,6 @@
 var fs = require("fs"),
   emojiLib = require("emojilib"),
+  unicodeEmojiJSON = require("unicode-emoji-json"),
   inflection = require("inflection"),
   mkdirp = require("mkdirp");
 
@@ -18,6 +19,15 @@ var categories = [
 ];
 
 var sets = ["apple", "facebook", "google", "twitter"];
+
+const emojiLibData = {};
+for (const emoji in unicodeEmojiJSON) {
+  const emojiData = unicodeEmojiJSON[emoji];
+  emojiLibData[emojiData.slug] = {
+    ...emojiData,
+    keywords: emojiLib[emoji],
+  };
+}
 
 module.exports = (options) => {
   delete require.cache[require.resolve("emoji-datasource")];
@@ -81,8 +91,8 @@ module.exports = (options) => {
     datum.text = datum.text || "";
     delete datum.texts;
 
-    if (emojiLib.lib[datum.short_name]) {
-      datum.keywords = emojiLib.lib[datum.short_name].keywords;
+    if (emojiLibData[datum.short_name]) {
+      datum.keywords = emojiLibData[datum.short_name].keywords;
     }
 
     if (datum.category != "Skin Tones" && datum.category !== "Component") {

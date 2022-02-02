@@ -41,7 +41,7 @@
     "babel-loader": "^8.0.0",
     "babel-plugin-transform-define": "^2.0.0",
     "emoji-datasource": "7.0.2",
-    "emojilib": "^2.2.1",
+    "emojilib": "^3.0.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "inflection": "1.10.0",
@@ -53,6 +53,7 @@
     "react-test-renderer": "^16.8.4",
     "rimraf": "2.5.2",
     "size-limit": "^0.11.4",
+    "unicode-emoji-json": "^0.3.0",
     "webpack": "^3.6.0"
   },
   "scripts": {
