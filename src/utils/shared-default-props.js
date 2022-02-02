@@ -3,7 +3,7 @@ const EmojiDefaultProps = {
   set: "apple",
   sheetSize: 64,
   sheetColumns: 59,
-  sheetRows: 60,
+  sheetRows: 59,
   native: false,
   forceSize: false,
   tooltip: false,
