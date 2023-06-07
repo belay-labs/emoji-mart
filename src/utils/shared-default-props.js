@@ -2,14 +2,14 @@ const EmojiDefaultProps = {
   skin: 1,
   set: "apple",
   sheetSize: 64,
-  sheetColumns: 60,
-  sheetRows: 60,
+  sheetColumns: 61,
+  sheetRows: 61,
   native: false,
   forceSize: false,
   tooltip: false,
   useButton: true,
   backgroundImageFn: (set, sheetSize) =>
-    `https://unpkg.com/emoji-datasource-${set}@${EMOJI_DATASOURCE_VERSION}/img/${set}/sheets-256/${sheetSize}.png`,
+    `https://unpkg.com/emoji-datasource-${set}@${EMOJI_DATASOURCE_VERSION}/img/${set}/sheets-256/${sheetSize}.png`
 };
 
 const PickerDefaultProps = {
@@ -41,7 +41,7 @@ const PickerDefaultProps = {
   skinEmoji: "",
   notFound: () => {},
   notFoundEmoji: "sleuth_or_spy",
-  icons: {},
+  icons: {}
 };
 
 export { PickerDefaultProps, EmojiDefaultProps };
